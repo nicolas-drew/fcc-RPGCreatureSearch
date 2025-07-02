@@ -64,6 +64,7 @@ main {
   font-size: 1.1rem;
   transition: 0.2s ease;
   box-shadow: 0 0 10px #7f53ac44 inset;
+  width: 60%;
 }
 
 #search-input:focus {
@@ -73,7 +74,7 @@ main {
 }
 
 #search-button {
-  padding: 13px 50px;
+  padding: 13px 53px;
   background: linear-gradient(135deg, #9f7fff, #7f53ac);
   border: none;
   border-radius: 12px;
@@ -134,7 +135,7 @@ main {
   padding: 6px 14px;
   border-radius: 14px;
   background: linear-gradient(135deg, #9f7fffcc, #7f53accc);
-  color: #fff;
+  color: var(--color-font-white);
   font-weight: 700;
   letter-spacing: 1.2px;
   font-size: 1rem;
@@ -146,5 +147,55 @@ table {
   border-collapse: collapse;
   box-shadow: 0 0 20px #7f53acaa;
   background: #352f57dd;
-  user-select: text;
+  border-radius: 15px;
+}
+
+#top-stats {
+  background: linear-gradient(135deg, #9f7fff, #7f53ac);
+}
+#top-stats th:first-child {
+  border-top-left-radius: 15px;
+}
+
+#top-stats th:last-child {
+  border-top-right-radius: 15px;
+}
+
+#base,
+#stats {
+  color: var(--color-font-white);
+}
+
+#stats {
+  text-align: right;
+}
+
+th,
+td {
+  padding: 12px 20px;
+  text-align: left;
+  font-weight: 600;
+  color: #d6aaff;
+  letter-spacing: 1.1px;
+  border-bottom: 1px solid #6a5f95aa;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+td:last-child {
+  font-weight: 700;
+  color: var(--color-font-white);
+  text-shadow: 0 0 6px #d6aaff;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  #search-input {
+    flex: 100%;
+  }
+
+  #search-button {
+    flex: 100%;
+  }
 }
