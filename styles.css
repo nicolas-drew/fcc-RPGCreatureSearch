@@ -8,6 +8,22 @@
     radial-gradient(circle at 50% 50%, #b392ff33 0%, transparent 70%);
   --background: linear-gradient(135deg, #1e1e2f 0%, #4a4a6a 100%);
   --color-font-white: #eee;
+  --fire: linear-gradient(135deg, #ff6a00, #ff3d00);
+  --water: linear-gradient(135deg, #00b4ff, #0077ff);
+  --rock: linear-gradient(135deg, #B6A136, #9C8619);
+  --electric: linear-gradient(135deg, #F7D02C, #C9A40C);
+  --dragon: linear-gradient(135deg, #6F35FC, #4614C4);
+  --grass: linear-gradient(135deg, #55c57a, #2a9d8f);
+  --poison: linear-gradient(135deg, #a259ff, #6f00ff);
+  --ice: linear-gradient(135deg, #a0e9ff, #5ec3ff);
+  --fairy: linear-gradient(135deg, #ff9ad1, #ff68b3);
+  --ground: linear-gradient(135deg, #cdbf87, #a17c22);
+  --flying: linear-gradient(135deg, #87bfff, #4787ff);
+  --bug: linear-gradient(135deg, #a8b820, #6d7815);
+  --dark: linear-gradient(135deg, #4b3b2b, #1f150b);
+  --psychic: linear-gradient(135deg, #f15bb5, #a30874);
+  --steel: linear-gradient(135deg, #a7a9be, #6b6e7a);
+  --ghost: linear-gradient(135deg, #6050ff, #2c0fff);
 }
 
 * {
@@ -22,6 +38,7 @@ body {
   color: var(--color-font-white);
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
@@ -34,6 +51,12 @@ main {
   max-width: 520px;
   width: 100%;
   padding: 30px 40px 30px;
+}
+
+header {
+  margin-top: -15px;
+  margin-bottom: 35px;
+  text-shadow: 0 0 5px #9a7cff88;
 }
 
 #search-section {
@@ -55,13 +78,13 @@ main {
 }
 
 #search-input {
-  padding: 12px 16px;
+  padding: 9px 16px;
   border-radius: 12px;
   border: 2px solid #7f53ac;
   background-color: #322f4d;
   color: var(--color-font-white);
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   transition: 0.2s ease;
   box-shadow: 0 0 10px #7f53ac44 inset;
   width: 60%;
@@ -74,13 +97,13 @@ main {
 }
 
 #search-button {
-  padding: 13px 53px;
+  padding: 10px 45px;
   background: linear-gradient(135deg, #9f7fff, #7f53ac);
   border: none;
   border-radius: 12px;
   color: var(--color-font-white);
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   box-shadow: 0 0 10px #b18aff;
   transition: 0.2s ease-in;
   cursor: pointer;
@@ -148,11 +171,13 @@ table {
   box-shadow: 0 0 20px #7f53acaa;
   background: #352f57dd;
   border-radius: 15px;
+  overflow: hidden;
 }
 
 #top-stats {
   background: linear-gradient(135deg, #9f7fff, #7f53ac);
 }
+
 #top-stats th:first-child {
   border-top-left-radius: 15px;
 }
@@ -164,6 +189,7 @@ table {
 #base,
 #stats {
   color: var(--color-font-white);
+  font-size: 1.2em;
 }
 
 #stats {
@@ -198,4 +224,84 @@ td:last-child {
   #search-button {
     flex: 100%;
   }
+}
+
+#types span.fire {
+  background: var(--fire);
+  box-shadow: 0 0 8px #ff4b00cc;
+}
+
+#types span.water {
+  background: var(--water);
+  box-shadow: 0 0 8px #008cffcc;
+}
+
+#types span.rock {
+  background: var(--rock);
+  box-shadow: 0 0 8px #7a6f35cc;
+}
+
+#types span.electric {
+  background: var(--electric);
+  box-shadow: 0 0 8px #C9A40Ccc;
+}
+
+#types span.dragon {
+  background: var(--dragon);
+  box-shadow: 0 0 8px #6F35FCcc;
+}
+
+#types span.grass {
+  background: var(--grass);
+  box-shadow: 0 0 8px #2a9d8fcc;
+}
+
+#types span.poison {
+  background: var(--poison);
+  box-shadow: 0 0 8px #7f00ffcc;
+}
+
+#types span.ice {
+  background: var(--ice);
+  box-shadow: 0 0 8px #66c3ffcc;
+}
+
+#types span.fairy {
+  background: var(--fairy);
+  box-shadow: 0 0 8px #ff68b3cc;
+}
+
+#types span.ground {
+  background: var(--ground);
+  box-shadow: 0 0 8px #a17c22cc;
+}
+
+#types span.flying {
+  background: var(--flying);
+  box-shadow: 0 0 8px #4787ffcc;
+}
+
+#types span.bug {
+  background: var(--bug);
+  box-shadow: 0 0 8px #6d7815cc;
+}
+
+#types span.dark {
+  background: var(--dark);
+  box-shadow: 0 0 8px #3a2e1fcc;
+}
+
+#types span.psychic {
+  background: var(--psychic);
+  box-shadow: 0 0 8px #c738a6cc;
+}
+
+#types span.steel {
+  background: var(--steel);
+  box-shadow: 0 0 8px #6b6e7acc;
+}
+
+#types span.ghost {
+  background: var(--ghost);
+  box-shadow: 0 0 8px #2c0fffcc;
 }

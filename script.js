@@ -27,6 +27,7 @@ const getCreature = () => {
       data.types.forEach((t) => {
         const typeElement = document.createElement("span");
         typeElement.textContent = t.name.toUpperCase();
+        typeElement.classList.add(t.name.toLowerCase());
         types.appendChild(typeElement);
       });
 
@@ -44,18 +45,23 @@ const getCreature = () => {
     })
     .catch((err) => {
       alert("Creature not found");
-      creatureName.textContent = "";
-      creatureId.textContent = "";
-      weight.textContent = "";
-      height.textContent = "";
+      creatureName.textContent = "Creature";
+      creatureId.textContent = "#0";
+      weight.textContent = "Weight: 0";
+      height.textContent = "Height: 0";
       types.textContent = "";
-      hp.textContent = "";
-      attack.textContent = "";
-      defense.textContent = "";
-      specialAttack.textContent = "";
-      specialDefense.textContent = "";
-      speed.textContent = "";
+      hp.textContent = "0";
+      attack.textContent = "0";
+      defense.textContent = "0";
+      specialAttack.textContent = "0";
+      specialDefense.textContent = "0";
+      speed.textContent = "0";
     });
 };
 
 searchButton.addEventListener("click", getCreature);
+searchInput.addEventListener("keydown", (e)=> {
+  if (e.key === "Enter") {
+    getCreature()
+  }
+})
